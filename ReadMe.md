@@ -43,11 +43,11 @@
 
 > **目录说明**
 
-![zafu](https://i.ibb.co/MPMGWfZ/image.jpg)
+![zafu](zafu.png)
 
 > **各页面展示**
 
-<img src="https://i.ibb.co/zSYkZzM/zafu.png" alt="首页" style="zoom:50%;" /><img src="https://i.ibb.co/Z1WbZHg/image.jpg" alt="发帖" style="zoom:50%;" />
+<img src="首页.jpg" alt="首页" style="zoom:50%;" /><img src="发帖.jpg" alt="发帖" style="zoom:50%;" />
 
 
 
@@ -55,7 +55,7 @@
 
 - 
 
-<img src="https://i.ibb.co/MPMGWfZ/image.jpg" alt="我的" style="zoom:50%;" /><img src="https://i.ibb.co/X4Jk7BK/image.jpg" alt="帖子详细" style="zoom:50%;" />
+<img src="我的.jpg" alt="我的" style="zoom:50%;" /><img src="帖子详细.jpg" alt="帖子详细" style="zoom:50%;" />
 
 
 
