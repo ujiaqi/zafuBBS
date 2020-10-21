@@ -1,0 +1,130 @@
+<!--pages/me/me.wxml-->
+<!-- 我的相关内容 -->
+<view class="nav-wrap" style="height: {{navH*2+20}}px;">
+    <!-- 顶部自定义栏 -->
+    <view class="nav-title" style="line-height: {{navH*2+44}}px;">我的</view>
+    <view style="display: flex; justify-content: space-around;flex-direction: column;height:100%;">
+        <navigator hoverClass="none" url="/pages/serach/search">
+            <view class="nav-capsule">
+                <view>
+                    <image class="back-pre" src="../../assets/images/icon/search.png" style="height:35px;width:35px;"></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<view class="content" style="margin-top:{{navH*4+10}}rpx">
+    <!-- 个人信息 -->
+  <view class="top">
+    <view class="user-info">
+        <view class="user-photo">
+            <image src=".././../assets/images/common/anonymous.png"></image>
+        </view>
+        <!-- 用户名、标签 -->
+        <view class="user-tag">
+            <view class="user-name">
+                <text>壹加柒哈哈</text>
+            </view>
+            <view class="user-flag">
+                <view class="identity">农林认证</view>
+                <view class="level">Lv2</view>
+            </view>
+        </view>
+        <view class="grow-up">
+            <view class="process">
+                <image src="../../assets/images/icon/Sign.png"></image>
+                <view class="sign">
+                    <button size="mini">签到</button>
+                </view>
+            </view>
+            <!-- 本来想开发积分的 -->
+            <view class="grades">
+                <view class="ginkgo">当前银杏叶数量：800片</view>
+                <view class="ginkgo">距离下一等级还需：100片</view>
+            </view>
+        </view>
+    </view>
+    <!-- 内容分类 -->
+    <view class="user-detail">
+        <view class="tpye">
+            <view class="type-name">帖子</view>
+            <view class="type-num">0</view>
+        </view>
+        <view class="tpye">
+            <view class="type-name">收藏</view>
+            <view class="type-num">0</view>
+        </view>
+        <view class="tpye">
+            <view class="type-name">消息</view>
+            <view class="type-num">0</view>
+        </view>
+        <view class="tpye">
+            <view class="type-name">鹅毛</view>
+            <view class="type-num">666</view>
+        </view>
+    </view>
+  </view>
+  <!-- 这里是两个板块 -->
+  <view class="middle">
+    <view class="middle-content">
+        <view class="communication">
+            <!-- 公共聊天区 -->
+            <view class="desc-text">
+                <view class="title1">东湖聊天池</view>
+                <view class="detail1">聊天交友，就在这里！</view>
+            </view>
+            <view class="desc-img1">
+                <image src="../../assets/images/me/communication.png"></image>
+            </view>
+        </view>
+        <view class="division">
+            <view class="vertical-line">
+                <image src="../../assets/images/common/vertical.png"></image>
+            </view>
+        </view>
+        <!-- 通过鹅毛可以换购商品 -->
+        <view class="shop">
+            <view class="desc-text">
+                <view class="title2">鹅毛交易区</view>
+                <view class="detail2">带上鹅毛，拥有天下！</view>
+            </view>
+            <view class="desc-img2 ">
+                <image src="../../assets/images/me/trade.png"></image>
+            </view>
+        </view>
+    </view>
+  </view>
+<!-- 一些本打算开发的功能 -->
+  <view class="bottom">
+    <view class="bottom-content">
+        <view class="me-about">
+            <text>我的信息</text>
+            <image src="../../assets/images/common/next.png"></image>
+        </view>
+        <view class="me-about">
+            <text>考试刷题</text>
+            <image src="../../assets/images/common/next.png"></image>
+        </view>
+        <view class="me-about">
+            <text>农林悄话</text>
+            <image src="../../assets/images/common/next.png"></image>
+        </view>
+        <view class="me-about">
+            <text>投诉建议</text>
+            <image src="../../assets/images/common/next.png"></image>
+        </view>
+        <view class="me-about">
+            <text>关于平台</text>
+            <image src="../../assets/images/common/next.png"></image>
+        </view>
+    </view>
+  </view>
+  <!-- <view class="foot">
+    <view class="copyright">
+        <view>copyright@ZAFU_Fishei</view>
+        <view>2020</view>
+    </view>
+  </view> -->
+</view>
+

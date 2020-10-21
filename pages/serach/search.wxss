@@ -1,0 +1,50 @@
+/* pages/serach/search.wxss */
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  color: #000;
+}
+
+.nav-title {
+  position: absolute;
+  text-align: center;
+  max-width: 327rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 35rpx;
+  color: #2c2b2b;
+  font-weight: 400;
+}
+
+.nav-capsule {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  width: 50rpx;
+  justify-content: space-around;
+  /* border-radius: 50%; */
+  margin-top: 54rpx;
+  z-index: 999999999;
+}
+
+.back-pre {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 11rpx;
+  margin-left: 30rpx;
+}
+
+.weui-search-bar__cancel-btn{
+  font-size: 30rpx;
+}
+
+

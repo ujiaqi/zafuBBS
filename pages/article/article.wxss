@@ -1,0 +1,178 @@
+/* pages/article/article.wxss */
+.content-input {
+  background-color: #ffffff;
+  margin-bottom: 0rpx;
+  position: relative;
+  padding: 18rpx 24rpx;
+}
+
+.text-input {
+  height: 250rpx;
+  width: 100%;
+  min-height: 250rpx;
+  max-height: 400rpx;
+  z-index: 998;
+  margin: 0rpx 8rpx;
+ }
+
+ /* 视频以及图片展示 */
+ .image-list{
+  display: flex;
+  flex-wrap: wrap;
+  /* padding-left: 18rpx; */
+  /* justify-content: center; */
+ }
+
+ .showImage{
+  width: 28vw;
+  height: 28vw;
+  margin: 6rpx 10rpx 10rpx 10rpx;
+ }
+
+ .showImage image{
+  width: 100%;
+  height: 100%;
+ }
+
+ .addImage{
+  background: #f8f8f8;
+  width: 28vw;
+  height: 28vw;
+  margin: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .addImage image{
+   width: 40%;
+   height: 40%;
+ }
+
+
+ .video {
+  width: 60vw;
+  height: 60vw;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+
+
+ /* 删除和增加 */
+ .box{
+  box-sizing: border-box;
+  position: relative;
+ }
+
+ .delete{
+  position:absolute;
+  top: -21rpx;
+  right: -21rpx;
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .delete image{
+  width: 32rpx;
+  height: 32rpx;
+ }
+
+
+
+ /* 上传 */
+ .toUpload{
+  display: flex;
+  align-items: center;
+ }
+
+ .uploadIcon{
+  margin: 0px 10rpx 0rpx 0rpx;
+  padding: 0px;
+ }
+ .uploadIcon image{
+  vertical-align: middle;
+  width: 56rpx;
+  height: 56rpx;
+  padding: 8rpx 8rpx;
+ }
+
+ .uploadIcon:hover{
+  background-color: rgb(248, 248, 248);
+ }
+
+
+ /* 标签 */
+ .tag-title {
+  font-size: 32rpx;
+  margin: 0rpx 8rpx;
+}
+
+.tag-list {
+  margin-left: -14rpx; 
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  height: 80rpx;
+  margin-top: 6rpx;
+
+}
+
+.tag {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 28rpx;
+  color: gray;
+  padding: 6rpx 16rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  word-break: keep-all;
+}
+
+.arrow-right {
+  margin-left: auto;
+  width: 48rpx; 
+  height: 48rpx;
+  min-width: 48rpx;
+  max-width: 48rpx;
+}
+
+.switch{
+  display: flex;
+}
+
+.weui-cell__bd{
+  font-size: 32rpx;
+  margin: 0rpx 8rpx;
+}
+
+::-webkit-scrollbar {
+  
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+
+.sendArticle{
+  padding-top: 0rpx;
+}
+
+.confirm{
+  margin-top: 30rpx;
+  width: 250rpx;
+}
+.cancel{
+  margin-top: 20rpx;
+  width: 250rpx;
+}
+

@@ -1,0 +1,158 @@
+/**app.wxss**/
+@import '/style/icon/weui-icon.wxss';
+@import '/style/weui/weui.wxss';
+
+.card {
+  background-color: #ffffff;
+  margin-bottom: 16rpx;
+  position: relative;
+  padding: 18rpx 24rpx;
+}
+
+.line {
+  height: 1px;
+  background-color: #f8f8f8;
+  margin: 18.72rpx 0;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+
+.avatar-large {
+  width: 82rpx; 
+  height: 82rpx;
+  min-width: 82rpx;
+  max-width: 82rpx;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 28rpx;
+}
+
+.content {
+  font-size: 30rpx;
+}
+
+.fade-title {
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.subtitle {
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.flow-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.img-text {
+  display: flex;
+  align-items: center;
+}
+
+.img-text image{
+  height: 48rpx;
+  width: 48rpx;
+  margin-left: 9.36rpx;
+}
+
+.img-text text {
+  text-align: center;
+  width: 86rpx;
+  font-size: 32rpx;
+  color: #888888;
+}
+
+.single-line {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.gray-bg {
+  background: #f8f8f8;
+}
+
+.highlight {
+  color:dodgerblue;
+}
+
+.btn-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  background-color: #fff;
+}
+
+.btn-clear::after {
+  border: 0;
+}
+
+.user-label {
+  padding: 0rpx 4rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 22rpx;
+  color: white;
+  background-color: #A7B1B3;
+  margin-right: 16rpx;
+  position: relative;
+  top: -2rpx;
+  border-radius: 2rpx;
+}
+
+/* 导航栏样式 */
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  color: #000;
+  z-index: 9999999;
+}
+
+.nav-title {
+  position: absolute;
+  text-align: center;
+  max-width: 377rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 35rpx;
+  color: #2c2b2b;
+  font-weight: 400;
+}
+
+.nav-capsule {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  width: 50rpx;
+  justify-content: space-around;
+  border-radius: 50%;
+  margin-top: 54rpx;
+  z-index: 999999999;
+}
+
+.back-pre {
+  width: 35px;
+  margin-top: 11rpx;
+  margin-left: 25px;
+}

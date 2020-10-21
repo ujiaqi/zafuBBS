@@ -1,0 +1,138 @@
+<!--pages/article/article.wxml-->
+<view class="content" style="margin-top:{{navH*4+40}}rpx">
+  <view class="content-input">
+
+     <!-- 文本输入框 -->
+    <view>
+      <textarea class='text-input'
+        autofocus
+        bindinput="bindContent"
+        maxlength='200'
+        placeholder="请输入文字内容"
+        auto-height='{{true}}' 
+        />
+    </view>
+
+    <!-- 对于上传后的照片加以显示，可删除和添加 -->
+    <view class="image-list" wx:if="{{imageList.length > 0}}">
+      <view class="showImage box" wx:for="{{imageList}}" wx:key="item">
+        <view class="delete">
+          <image
+            src="../../assets/images/send/del.png"
+            data-imageId="{{index}}"
+            bindtap="deleteImage"
+          />
+        </view>
+        <image 
+          src="{{item}}"
+          mode="aspectFill"
+          data-imageId="{{index}}"
+          bindtap="thisImage"
+        />
+      </view>
+      <view class="addImage" wx:if="{{imageList.length < 9}}">
+        <image bindtap="chooseImage"
+          src="../../assets/images/send/plus.png"
+        />
+      </view>
+    </view>
+
+    <!-- 对上传后的视频进行展示和处理 -->
+    <view class="video box" wx:if="{{ video && video.tempFilePath }}">
+      <view class="delete">
+        <image 
+          src="../../assets/images/send/del.png"
+          data-videoId="{{index}}"
+          bindtap="deleteVideo"
+        />
+      </view>
+      <video
+        src="{{video.tempFilePath}}"
+        object-fit="cover"
+        show-fullscreen-btn="{{false}}"
+      />    
+    </view>
+
+    <!-- 上传照片和视频 -->
+    <view class="line"></view>
+    <view class="toUpload">
+
+      <!-- 图片 -->
+      <view class="uploadIcon">
+        <image
+          src="../../assets/images/send/photo.png"
+          bindtap="chooseImage" 
+        />
+      </view>
+
+      <!-- 视频 -->
+      <view class="uploadIcon">
+        <image 
+          src="../../assets/images/send/video.png"  bindtap="chooseVideo"
+        />
+      </view>
+    </view>
+
+    <!-- 位置选择 -->
+    <view>
+      <view class="line"></view>
+      <view class="horizontal" bindtap="chooseLocation">
+        <view class="tag-title">
+          {{location && location.length > 0 ? location: '选择位置'}}
+        </view>
+        <image wx:if="{{location && location.length > 0}}"
+          catchtap="deleteLocation"
+          class="arrow-right"
+          src="../../assets/images/send/clear.png"
+        />
+        <image wx:if="{{ !location }}"
+          class="arrow-right" 
+          src="../../assets/images/send/arrow_right.png"
+        />
+      </view>
+    </view>
+
+    <!-- 是否匿名 -->
+    <view class="line"></view>
+    <view class="switch ">
+      
+      <view class="weui-cell__bd">匿名发布</view>
+      <view class="weui-cell__ft" >
+          <label class="weui-switch-cp">
+              <checkbox-group bindchange="postStatus">
+                <checkbox class="weui-switch-cp__input" checked="{{anonymous}}" />
+                <view class="weui-switch-cp__box"></view>
+              </checkbox-group>
+          </label>
+      </view>
+    </view>
+
+
+    <!-- 板块选择 -->
+    <view wx:if="{{topic.sorts && topic.sorts.length > 0}}" >
+      <view class="line"></view>
+        <view class="tag-title">选择类型</view>
+        <scroll-view scroll-x scroll-with-animation enable-flex="true" class="tag-list">
+          <view class="tag"
+            bindtap="clickTag"
+            data-topicId="{{index}}"
+            style="{{index == topic.selected? 'color:' +theme.tabColor+ ';border-color:'+theme.tabColor:''}}"
+            wx:for="{{topic.sorts}}"
+            wx:key="index"
+          >{{item}}</view>
+        </scroll-view>
+    </view>
+
+  </view>
+  <view class="sendArticle">
+  <label class="weui-agree">
+      <checkbox class="weui-agree__checkbox-check" />
+
+      <span class="weui-agree__checkbox"></span>
+      <span class="weui-agree__text">阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator></span>
+  </label>
+    <a class="weui-btn weui-btn_primary confirm" >确认发布</a>
+  </view>
+  <a class="weui-btn weui-btn_default cancel">取消发布</a>
+  
+</view>

@@ -1,0 +1,297 @@
+/* pages/article-detail/article-detail.wxss */
+
+/* 分类具体内容 */
+.content{
+  
+  justify-content: center;
+  margin: auto;
+  margin-top: 10rpx;
+  
+
+}
+.sort-content-item{
+  
+  padding-bottom: 20rpx;
+  border-bottom: 5rpx rgb(240, 242, 243) solid ;
+}
+.user-info{
+  width: 88%;
+  margin: auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+
+.user-photo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user-info image{
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.user-detail{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+
+.user-name{
+  font-weight: 800;
+  color: cadetblue;
+}
+
+.user-flag{
+  display: flex;
+  flex-direction: row;
+}
+
+.user-flag view{
+  font-weight: 100;
+  color: white;
+  font-size: 20rpx;
+  margin-right: 10rpx;
+  padding: 5rpx;
+  border-radius: 4rpx;
+}
+
+.article-sort{
+  background-color: burlywood;
+}
+
+.user-sex{
+  background-color: chocolate;
+}
+
+.user-level{
+  background-color: cornflowerblue;
+}
+
+.sort-content-middle{
+  width: 88%;
+  margin: auto;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.acticle-text{
+  word-wrap: break-word;
+  font-size: 30rpx;
+  display: -webkit-box;
+  text-align: left;
+  overflow: hidden;
+  margin-left: 7rpx;
+  /* text-align: center; */
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  letter-spacing: 5rpx;
+}
+
+.acticle-image{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.show-image{
+  width: 28vw;
+  height: 28vw;
+  margin: 7rpx 8rpx 7rpx 2rpx;
+}
+
+.show-image image{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 5rpx;
+  border-radius: 10rpx;
+}
+
+/* 更多 */
+.post-detail{
+  display: block;
+  width: 200rpx;
+}
+.handle{
+  padding-left: 170rpx;
+}
+.handle image{
+  
+  width: 35rpx;
+  height: 35rpx;
+  text-align: right;
+}
+.post-time{
+  display: block;
+  float: right;
+}
+
+.post-time text{
+  font-size: 22rpx;
+  color: #a09c9c;
+}
+
+/* 文章的底部显示 */
+.bottom-img{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+
+.sort-content-bottom{
+  height: 52rpx;
+  width: 90%;
+  display: flex;
+  align-content: center;
+  margin: auto;
+  justify-content: flex-end;
+}
+
+.collect, .share{
+  margin-left: 15rpx;
+  line-height: 52rpx;
+}
+
+.like{
+  line-height: 52rpx;
+}
+
+
+.action-desc{
+  padding-left: 6rpx;
+  font-size: 25rpx;
+}
+
+/* 底部评论 */
+.first-tag{
+  display: flex;
+  
+}
+
+.comment-img{
+  padding: 20rpx 10rpx 0rpx 10rpx;
+  width: 90%;
+  margin: auto;
+  
+}
+
+.comment-img text{
+  align-self: center;
+}
+
+
+
+.comment-img image{
+  width: 60rpx;
+  height: 40rpx;
+  align-self: center;
+  
+}
+
+.directing{
+  height: 10rpx;
+}
+
+.directing image{
+  position: relative;
+  width: 54rpx;
+  height: 40rpx;
+  left: 600rpx;
+  top: -20rpx;
+}
+
+.user-info-mini{
+  width: 88%;
+  margin: auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+
+.user-photo-mini{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user-info-mini image{
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.user-detail-mini{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+
+.user-name-mini{
+  font-weight: 800;
+  color: cadetblue;
+  font-size: 25rpx;
+}
+
+.user-flag-mini{
+  position: relative;
+  top: -10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-flag-mini view{
+  font-weight: 100;
+  color: white;
+  font-size: 15rpx;
+  margin-right: 10rpx;
+  padding: 5rpx;
+  border-radius: 4rpx;
+}
+
+.article-sort-mini{
+  background-color: burlywood;
+}
+
+.user-sex-mini{
+  background-color: chocolate;
+}
+
+.user-level-mini{
+  background-color: cornflowerblue;
+}
+
+/* 更多mini */
+.post-detail-mini{
+  display: block;
+  width: 230rpx;
+  padding-right: 8rpx;
+}
+.handle-mini{
+  padding-left: 200rpx;
+  
+}
+.handle-mini image{
+  
+  width: 35rpx;
+  height: 35rpx;
+  text-align: right;
+}
+.post-time-mini{
+  display: block;
+  float: right;
+}
+
+.post-time-mini{
+  font-size: 25rpx;
+}

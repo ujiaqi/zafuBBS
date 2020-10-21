@@ -1,0 +1,102 @@
+<!--pages/send/send.wxml-->
+<view class="content" style="margin-top:{{navH*4+40}}rpx">
+  <!--pages/writer/writer.wxml-->
+  <view class="card">
+    <view>
+      <textarea class='text-input'
+        bindinput="bindContent" 
+        maxlength='500'
+        placeholder="请输入文本"
+        auto-height='{{true}}' 
+        />
+    </view>
+    <!-- video player -->
+    <view wx:if="{{video.src}}" class="video box">
+      <view class='del'>
+        <image
+          src="../../assets/images/send/del.png" 
+          data-idx="{{index}}"
+          bindtap='clickDeleteVideo' 
+          >
+        </image>
+      </view>
+      <video
+        src="{{video.src}}" 
+        object-fit="cover" 
+        show-fullscreen-btn="{{false}}">
+      </video>
+    </view>
+
+    <!-- image list -->
+    <view class='image-list' wx:if="{{images.length > 0}}">
+      <view class="thumb box" wx:for="{{images}}" wx:for-item="item" wx:key="item">
+        <view class='del'>
+          <image
+            src="../../assets/images/send/del.png" 
+            data-idx="{{index}}"
+            bindtap='clickDelete' 
+            >
+          </image>
+        </view>
+        <image src="{{item}}" 
+          mode='aspectFill' 
+          data-idx="{{index}}"
+          bindtap='clickImage' 
+          >
+        </image>
+      </view>
+      <view class="add" wx:if='{{images.length < 9}}' >
+        <image bindtap='chooseImage' src="../../assets/images/send/plus.png" ></image>
+      </view>
+    </view>
+    <!-- Menu bar -->
+    <view class='line'></view>
+    <view class="bar">
+      <view class="item">
+        <image src="../../assets/images/send/photo.png" bindtap="chooseImage" />
+      </view>
+      
+      <view class="item" wx:if="{{true}}">
+        <image src="../../assets/images/send/video.png" bindtap="chooseVideo" />
+      </view>
+
+    </view>
+
+    <!-- 选择位置 -->
+    <view>
+      <view class='line'></view>
+      <view class='horizontal' bindtap='clickLocation'>
+        <view></view>
+        <view class='tag-title'>{{location && location.name ? location.name: '所在位置'}}</view>
+        <image wx:if="{{location && location.name}}"
+          catchtap='clickDeleteLocation'
+          class='arrow_right' src="../../assets/images/send/clear.png"/>
+        <image wx:if="{{!location || !location.name}}"
+          class='arrow_right' src="../../assets/images/send/arrow_right.png"/>
+      </view>
+    </view>
+    <!-- 选择话题 -->
+    <view wx:if="{{topic.items && topic.items.length > 0}}">
+      <view class='line'></view>
+      <view class='tag-title'>选择话题</view>
+      <view class='tag-list'>
+        <view class='tag'
+          bindtap='clickTag'
+          data-idx="{{index}}"
+          style="{{index == topic.selected? 'color:' +theme.tabColor+ ';border-color:'+theme.tabColor:''}}"
+          wx:for="{{topic.items}}" wx:for-item="item" wx:key="{{item}}"> {{item.text}} </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 发布与取消 -->
+  <button style='margin-top: 28rpx; background-color: {{theme.color}};' 
+    class='btn-submit' 
+    hover-class='btn-submit-hover'
+    bindtap='writerPublish'>发帖</button>
+  <button style='margin-top: 9.36rpx;' 
+    class='btn-cancel' 
+    hover-class='btn-cancel-hover'
+    bindtap='writerCancel'>取消</button>
+
+</view>

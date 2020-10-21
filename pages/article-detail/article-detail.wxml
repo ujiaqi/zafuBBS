@@ -1,0 +1,104 @@
+<!--pages/article-detail/article-detail.wxml-->
+
+<!-- 这里是帖子的详细页 -->
+<view class="content" style="margin-top:{{navH*4+40}}rpx">
+  <view class="sort-content-item">
+    <!-- 显示个人信息（头像、名称等）、发表时间等 -->
+    <view class="sort-content-top" >
+        <view class="user-info">
+            <view class="user-photo">
+                <image src="../../assets/images/common/anonymous.png" mode="widthFix"></image>
+            </view>
+            <view class="user-detail">
+                <view class="user-name">
+                    <text>匿名用户</text>
+                </view>
+                <view class="user-flag">
+                    <view class="article-sort">闲置交易</view>
+                    <view class="user-sex">小姐姐</view>
+                    <view class="user-level">Lv20</view>
+                </view>
+            </view>
+            <view class="post-detail">
+                <view class="handle">
+                    <image src="../../assets/images/common/more.png"></image>
+                </view>
+                <view class="post-time">
+                    <text>2020-08-28 08:30</text>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+    <!-- 显示包括帖子的文字以及图片内容 -->
+    <view class="sort-content-middle">
+        <view class="acticle-text">
+            <text>哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈</text>
+        </view>
+        <view class="acticle-image">
+            <block wx:for="{{testImage}}" wx:key="index">
+                <view class="show-image">
+                    <image src="{{item}}" mode="aspectfill"
+                    data-imageId="{{index}}"
+                    bindtap="thisImage"></image>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- 底部包括分享、点赞、收藏 -->
+    <view class="sort-content-bottom">
+        <view class="like">
+            <image src="../../assets/images/article/unlike.png" class="bottom-img"></image>
+            <text class="action-desc">点赞</text>
+        </view>
+        <view class="collect">
+            <image src="../../assets/images/article/collect.png" class="bottom-img"></image>
+            <text class="action-desc">收藏</text>
+        </view>
+        <view class="share">
+            <image src="../../assets/images/article/share.png" class="bottom-img"></image>
+            <text class="action-desc">分享</text>
+        </view>
+    </view>
+  </view>
+  <!-- 帖子用户评论 -->
+  <view class="comment">
+      <view class="first-tag">
+        <view class="comment-img">
+          <image src="../../assets/images/article/comment-y.png"></image>
+          <text>10条评论</text>
+        </view>
+      </view>
+      <view class="directing">
+        <image src="../../assets/images/common/directing.png"></image>
+      </view>
+      <view class="second-content">
+        <view class="sort-content-top-mini" >
+          <view class="user-info-mini">
+              <view class="user-photo-mini">
+                  <image src="../../assets/images/common/anonymous.png" mode="widthFix"></image>
+              </view>
+              <view class="user-detail-mini">
+                  <view class="user-name-mini">
+                      <text>匿名用户</text>
+                  </view>
+                  <view class="user-flag-mini">
+                      <view class="article-sort-mini">闲置交易</view>
+                      <view class="user-sex-mini">小姐姐</view>
+                      <view class="user-level-mini">Lv20</view>
+                  </view>
+              </view>
+              <view class="post-detail-mini">
+                  <view class="handle-mini">
+                      <image src="../../assets/images/common/more.png"></image>
+                  </view>
+                  <view class="post-time-mini">
+                      <text>2020-08-28 08:30</text>
+                  </view>
+                </view>
+            </view>
+        </view>
+      </view>
+  </view>
+</view>
+

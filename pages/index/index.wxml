@@ -1,0 +1,140 @@
+<!--pages/index/index.wxml-->
+<view class="nav-wrap" style="height: {{navH*2+20}}px;">
+    <!-- 自定义导航栏 -->
+    <view class="nav-title" style="line-height: {{navH*2+44}}px;">浙农林社区</view>
+    <view style="display: flex; justify-content: space-around;flex-direction: column;height:100%;">
+        <navigator hoverClass="none" url="/pages/serach/search">
+            <view class="nav-capsule">
+                <view>
+                    <image class="back-pre" src="../../assets/images/icon/search.png" style="height:35px;width:35px;"></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<view style="margin-top:{{navH*4+50}}rpx">
+    <!-- 轮播图 -->
+    <view class="bbs-swiper-container">
+        <swiper class="bbs-swiper" autoplay="true" circular="true" 
+            interval="3000" easing-function="easeOutCubic" 
+            current="{{swiperCurrent}}" 
+            bindchange="swiperChange">
+            <!-- 轮播图图片 -->
+            <swiper-item class="bbs-swiper-item" wx:for="{{rotationList}}" wx:key="index">
+            <!-- 加上widthFix可以使图片自适应 -->
+            <image src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <!-- 定制轮播图dots -->
+        <view class="bbs-dots">
+            <block wx:for="{{rotationList.length}}" wx:key="index">
+            <view class="bbs-dots-item{{index == swiperCurrent ? ' bbs-dot-active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+
+    <view class="mess_sort">
+        <!-- 实时留言 -->
+        <view class="leave-message">
+            <image class="message-image" src="../../assets/images/sort/message.png"></image>
+            <swiper class="swiper_message" circular vertical autoplay interval="5000" easing-function="easeInOutCubic" >
+                <swiper-item class="swiper-item-message">
+                    <view class="message">
+                        
+                        <text class="message-name">嘻嘻嘻嘻嘻</text>
+                        <text class="message-content">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+                    </view>
+                </swiper-item>
+                <swiper-item class="swiper-item-message">
+                    <view class="message">
+                        <!-- <image class="message-image" src="../../assets/images/sort/love-mood.png"></image> -->
+                        <text class="message-name">wwwwww: </text>
+                        <text class="message-content">哈哈哈</text>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+        
+
+
+        <!-- 分类标签 -->
+        <scroll-view scroll-x class="sort-nav" scroll-with-animation enable-flex="true">
+            <view class="sort-nav-item" wx:for="{{sortList}}"  wx:key="index">
+                <image class="sort-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
+                <text class="sort-nav-text">{{item.text}}</text>
+                <image class="down-selected"src="../../assets/images/sort/dwon.png"></image>
+            </view>
+        </scroll-view>   
+    </view>
+    
+
+
+    <!-- 分类具体的内容 -->
+    <view class="sort-content">
+        <block wx:for="{{5}}" wx:key="index" > 
+            <view class="sort-content-item">
+                <view class="sort-content-top" >
+                    <!-- 用户信息（头像、用户名等） -->
+                    <view class="user-info">
+                        <view class="user-photo">
+                            <image src="../../assets/images/common/anonymous.png" mode="widthFix"></image>
+                        </view>
+                        <view class="user-detail">
+                            <view class="user-name">
+                                <text>匿名用户</text>
+                            </view>
+                            <view class="user-flag">
+                                <view class="article-sort">闲置交易</view>
+                                <view class="user-sex">小姐姐</view>
+                                <view class="user-level">Lv20</view>
+                            </view>
+                        </view>
+                        <view class="post-detail">
+                            <view class="handle">
+                                <image src="../../assets/images/common/more.png"></image>
+                            </view>
+                            <view class="post-time">
+                                <text>2020-08-28 08:30</text>
+                            </view>
+                            
+                        </view>
+                    </view>
+                </view>
+                <!-- 帖子内容 -->
+                <view class="sort-content-middle">
+                    <view class="acticle-text">
+                        <text>哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈</text>
+                    </view>
+                    <view class="acticle-image">
+                        <block wx:for="{{testImage}}" wx:key="index">
+                            <view class="show-image">
+                                <image src="{{item}}" mode="aspectfill"></image>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="sort-content-bottom">
+                    <view class="like">
+                        <image src="../../assets/images/article/unlike.png" class="bottom-img"></image>
+                        <text class="num">99</text>
+                    </view>
+                    <view class="comment">
+                        <image src="../../assets/images/article/comment.png" class="bottom-img"></image>
+                        <text class="num">99</text>
+                    </view>
+                    
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
