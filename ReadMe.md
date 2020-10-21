@@ -42,7 +42,7 @@
 
 > **目录说明**
 
-![zafu](.\zafu.png)
+![zafu](zafu.png)
 
 > **各页面展示**
 
